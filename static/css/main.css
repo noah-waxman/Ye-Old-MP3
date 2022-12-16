@@ -1,0 +1,111 @@
+/* body {
+  height: 100vh;
+	width: 100%;
+    background-image: linear-gradient(to right top, #001f54, #031c49, #06193e, #081533, #0a1128);
+}
+
+form {
+  text-align : center;
+}
+
+.form {
+  text-align : center;
+}
+
+input[type="text"] {
+  width: 400px;
+  height: 30px;
+  transform: translateY(35vh);
+  font-size: 18px;
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input[type="submit"] {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+ */
+
+body {
+  height: 100vh;
+	width: 100%;
+  background-image: linear-gradient(to right top, #1282a2, #006992, #005080, #00376b, #001f54);
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+input[type="text"] {
+  margin-bottom: 10px;
+  margin-top: 5vh;
+
+  width: 100%;
+  max-width: 400px;
+  height: 30px;
+  font-size: 18px;
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+input[type="submit"] {
+  margin-top: 20px;
+  background-color: #1282A2;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 100px;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+  transition-duration: 0.3s;
+}
+
+@font-face {
+  font-family: 'OldLondon';
+  src: url('/static/OldLondon.ttf') format('truetype');
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  font-family: 'OldLondon';
+  font-size: 13vw;
+  color: #1282A2;
+  animation: gradient 8s infinite;
+  animation-delay: 5s;
+  text-shadow: 2px 2px #001f54;
+}
+
+.error-message {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  color: aliceblue;
+}

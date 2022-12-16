@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <title>Ye Old MP3</title>
+</head>
+
+<script>
+    function changeTitle() {
+      // Get the value of the input field
+      var inputValue = document.getElementById("text").value;
+      
+      // Define the pattern to match
+      var pattern = /https?:\/\/(www\.)?youtu\.?be(\.com)?\/.+/;
+      
+      // Check if the input value matches the pattern
+      if (!pattern.test(inputValue)) {
+        // If it doesn't match, set the error message
+        document.getElementById("error-message").innerHTML = "Please enter a valid YouTube Link";
+        return false;
+      }
+
+      // Clear the error message
+      document.getElementById("error-message").innerHTML = "";
+      return true;
+    }
+</script>  
+
+<body>
+    <h1>Ye Old MP3</h1>
+    <form onsubmit="return changeTitle()" action="/forward" method="GET">          
+        <div class="error-message" id="error-message"></div>
+        <input type="text" id="text" class="text" name="text" placeholder="Enter link" title="" onsubmit="changeTitle()">
+        <input type="submit" class="button" value="Submit">
+<!--        pattern="https?://(www\.)?youtu\.?be(\.com)?/.+"-->
+    </form>
+    
+</body>
+</html>
